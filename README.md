@@ -1,4 +1,4 @@
-🛒 Page de Destination Produit
+# 🛒 Page de Destination Produit
 
 Un projet de landing page créé dans le cadre du **certificat en design web responsive** de FreeCodeCamp. Cette page est conçue pour mettre en avant un produit et optimiser l’engagement des visiteurs.
 
