@@ -15,9 +15,6 @@ Un projet de landing page créé dans le cadre du **certificat en design web res
 ✅ Témoignages et section FAQ  
 ✅ Design responsive et moderne  
 
-## 📸 Aperçu du projet
-*(Ajoute ici une capture d’écran du projet.)*
-
 ## 📥 Installation et Utilisation
 1. **Clone le dépôt**  
    ```bash
