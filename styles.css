@@ -56,3 +56,28 @@ main{
     margin-top: 65px;
     padding-top: 0.5rem;
 }
+
+
+/* Responsive */
+@media screen and (max-width: 768px){
+    #header{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    main{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 500px){
+    #header #nav-bar ul{
+        flex-direction: column;
+    }
+    #header #nav-bar ul li{
+        margin-top: 5px;
+    }
+    main{
+        margin-top: 150px;
+    }
+}
