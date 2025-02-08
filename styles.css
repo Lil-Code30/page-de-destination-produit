@@ -1,9 +1,12 @@
+:root{
+    --main-color: Gainsboro;
+}
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100vh;
-    background-color: Gainsboro;
+    background-color: var(--main-color);
 }
 #header{
     width: 100%;
@@ -11,11 +14,12 @@ body{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 99;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0.5rem 1.5rem;
-    background-color: Gainsboro;
+    background-color: var(--main-color);
 }
 #header div{
     display: flex;
@@ -56,8 +60,176 @@ main{
     margin-top: 65px;
     padding-top: 0.5rem;
 }
+main form{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+main form h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+}
+main form p{
+    color: rgba(0, 0, 0, 0.778);
+    line-height: 0.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main form input[type="email"]{
+    width: 300px;
+    height: 1.9rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+main form input[type="submit"]{
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: white;
+    background-color: #1804FD;
+    outline: none;
+    border: 1px solid black;
+    transition: all 0.3s ease-in-out;
+}
+main form input[type="submit"]:hover{
+    cursor: pointer;
+    color: #1804FD;
+    background-color: #f0f0f0;
+    border: 1px solid #1804FD;
+}
+main .cartacteristics{
+    margin-bottom: 1.5rem;
+}
+main  .cartacteristic-article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
+main  .cartacteristic-article .article-text{
+    margin-left: 1rem;
+}
 
+main  .cartacteristic-article .article-text p{
+    color: rgba(0, 0, 0, 0.778);
+    margin-top: -15px;
+}
+
+main #how-it-works{
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #how-it-works iframe{
+    width: 80%;
+    height: 300px;
+    margin: 1rem 0.45rem;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+main #pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+main #pricing .pricing-article{
+    margin-top: 15px;
+    position: relative;
+    border: 1px solid black;
+    padding-top: 0;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main #pricing .pricing-article:nth-of-type(even){
+    margin: 0 1rem;
+    margin-top: 15px;
+}
+main #pricing .pricing-article .pricing-article-header{
+    background-color: grey;
+    width: 100%;
+    margin-top: 0;
+}
+main #pricing .pricing-article .pricing-article-header h3{
+    margin: 0;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+}
+main #pricing .pricing-article ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+main #pricing .pricing-article ul li{
+    margin-top: 5px;
+}
+main #pricing .pricing-article .pricing-article-price{
+    font-size: 1rem;
+    font-family:'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+}
+
+main #pricing .pricing-article .pricing-btn{
+    background-color: #1804FD;
+    color: azure;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    bottom: 5px;
+    left: 70px;
+}
+main #pricing .pricing-article .pricing-btn:hover{
+    color: #1804FD;
+    background-color: var(--main-color);
+    border: 1px solid  #1804FD;
+    cursor: pointer;
+}
+
+/* footer  */
+footer{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: rgba(128, 128, 128, 0.861);
+}
+footer ul{
+    list-style-type: none;
+    display: flex;
+}
+footer ul li:nth-of-type(even){
+    margin: 0 1rem;
+}
+footer ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+footer ul li a:hover{
+    color: azure;
+}
+footer p{
+    color: rgba(0, 0, 0, 0.887);
+    margin: 0;
+    padding-bottom: 5px;
+}
 /* Responsive */
 @media screen and (max-width: 768px){
     #header{
@@ -69,15 +241,32 @@ main{
     main{
         margin-top: 100px;
     }
+
+    main form p{
+        line-height: 1.8rem;
+    }
+    main #how-it-works iframe{
+        margin: 0.5rem;
+        height: auto;
+    }
 }
 @media screen and (max-width: 500px){
+
     #header #nav-bar ul{
         flex-direction: column;
     }
     #header #nav-bar ul li{
-        margin-top: 5px;
+        margin-top: 10px;
+        padding: 0;
+
     }
     main{
         margin-top: 150px;
+    }
+    main form input[type="email"]{
+        width: 200px;
+    }
+    main form input[type="submit"]{
+        width: 90px;
     }
 }
